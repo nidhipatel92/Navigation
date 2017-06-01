@@ -9,14 +9,18 @@ export default class HomeScreen extends Component {
     title: 'Home',
     headerBackTitle: null,
     headerTintColor: 'black',
-    headerStyle:{backgroundColor:'pink'}
+    // headerStyle:{backgroundColor:'pink'}
   };
   render() {
     const { navigate } = this.props.navigation;
+    let nextRoute = {
+      title: 'TwoScene',
+      passProps: { myProp: 'bar', searchText: 'pass data', }
+    };
     return (
       <View>
         <Button
-          onPress={() => navigate('Profile')}
+          onPress={() => navigate('Profile' , nextRoute)} // Pass data to ProfileScreen nextRoute
           title="Click"
         />
       </View>

@@ -18,6 +18,10 @@ const BasicApp = StackNavigator({
     name: 'Login',
     screen: LoginScreen
   },
+},{
+  navigationOptions:{
+    headerStyle:{backgroundColor:'pink'}
+  }
 });
 
 export default BasicApp;
