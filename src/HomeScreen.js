@@ -1,29 +1,43 @@
 import React ,{Component} from 'react';
-
 import {
-  Text, View , Button,
+  Text, View , Button,Image,
 } from 'react-native';
 
 export default class HomeScreen extends Component {
   static navigationOptions = {
-    title: 'Home',
-    headerBackTitle: null,
-    headerTintColor: 'black',
-    // headerStyle:{backgroundColor:'pink'}
-  };
-  render() {
-    const { navigate } = this.props.navigation;
-    let nextRoute = {
-      title: 'TwoScene',
-      passProps: { myProp: 'bar', searchText: 'pass data', }
+      title: 'Splash', //header:null <= if you want to hide the header
     };
-    return (
-      <View>
-        <Button
-          onPress={() => navigate('Profile' , nextRoute)} // Pass data to ProfileScreen nextRoute
-          title="Click"
-        />
-      </View>
-    );
+    render() {
+      const { navigate } = this.props.navigation;
+      return (
+        <View>
+          <Text>Hello, This is splash</Text>
+          <Button
+            onPress={() => navigate('Profile')}
+            title="Go Home"
+          />
+        </View>
+      );
+    }
   }
-}
+//   static navigationOptions = {
+//     title: 'Home',
+//     headerBackTitle: null,
+//     headerTintColor: 'black',
+//   };
+//   render() {
+//     const { navigate } = this.props.navigation;
+//     let nextRoute = {
+//       title: 'TwoScene',
+//       passProps: { myProp: 'bar', searchText: 'pass data', }
+//     };
+//     return (
+//       <View>
+//         <Button
+//           onPress={() => navigate('Profile' , nextRoute)} // Pass data to ProfileScreen nextRoute
+//           title="Click"
+//         />
+//       </View>
+//     );
+//   }
+// }
